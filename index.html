@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>NonSense Repacks</title>
-<meta name="description" content="Репаки игр от NonSense: без вырезанного контента, с русским установщиком.">
+<meta name="description" content="Репаки игр без вырезанного контента, с русским установщиком.">
 <link rel="canonical" href="https://not1024.github.io/NonSense/">
-<link rel="icon" href="images/logo.png">
+<link rel="icon" href="./images/logo.png">
 
 <!-- Карточка для ссылок в Telegram, Discord и соцсетях. Адреса обязательно
      абсолютные: относительные там не разворачиваются. -->
@@ -16,26 +16,21 @@
 <meta property="og:description" content="Репаки игр без вырезанного контента, с русским установщиком.">
 <meta property="og:url" content="https://not1024.github.io/NonSense/">
 <meta property="og:image" content="https://not1024.github.io/NonSense/images/card.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#0b0b0b">
-<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="./assets/style.css">
 </head>
 <body>
 
 <header class="top">
   <div class="inner top-inner">
-    <a class="brand" href="#/">
-      <img src="images/logo.png" alt="" width="30" height="30">
+    <a class="brand" href="./">
+      <img src="./images/logo.png" alt="" width="30" height="30">
       <span>NonSense <b>Repacks</b></span>
     </a>
 
-    <nav class="nav">
-      <a href="#/" data-route="catalog">Репаки</a>
-      <a href="#/about" data-route="about">О репаках</a>
-    </nav>
-
+    <nav class="nav"><a href="./" class="active">Репаки</a>
+      <a href="about/">О репаках</a></nav>
     <label class="search">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
            stroke-linecap="round" aria-hidden="true">
@@ -47,7 +42,18 @@
   </div>
 </header>
 
-<main id="view" class="view inner"></main>
+<main class="view inner">
+<h2 class="section-title">Репаки <span id="count">всего: 1</span></h2>
+    <div class="grid" id="grid"><a class="card" href="r/among-us/" data-key="amongus amongus">
+      <div class="cover"></div>
+      <div class="body">
+        <h3>Among Us</h3>
+        <div class="muted" style="font-size:13px">v2026.8.181</div>
+        <div class="line"><span class="tag solid">532 МБ</span><span class="tag">Казуальные игры</span></div>
+      </div>
+    </a></div>
+    <p class="empty" id="nothing" hidden>Ничего не нашлось.</p>
+</main>
 
 <footer class="bottom">
   <div class="inner bottom-inner">
@@ -55,7 +61,6 @@
     <span class="muted">Поддержите разработчиков — покупайте игры, которые вам понравились.</span>
   </div>
 </footer>
-
 <script src="assets/app.js"></script>
 </body>
 </html>

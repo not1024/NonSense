@@ -13,15 +13,8 @@
       ],
       "released": "16 ноя. 2018 г.",
       "store": "https://store.steampowered.com/app/945360/Among_Us/",
-      "cover": "images/among-us/cover.jpg",
-      "screenshots": [
-        "images/among-us/shot1.jpg",
-        "images/among-us/shot2.jpg",
-        "images/among-us/shot3.jpg",
-        "images/among-us/shot4.jpg",
-        "images/among-us/shot5.jpg",
-        "images/among-us/shot6.jpg"
-      ],
+      "cover": "",
+      "screenshots": [],
       "sizes": {
         "original": "1.2 ГБ",
         "repack": "532 МБ"
