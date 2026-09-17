@@ -1,0 +1,55 @@
+{
+  "releases": [
+    {
+      "slug": "among-us",
+      "title": "Among Us",
+      "version": "2026.8.181",
+      "revision": 1,
+      "description": "Локальная и сетевая игра для компании от 4 до 15 игроков о командной работе и предательстве... в космосе!",
+      "developer": "Innersloth",
+      "publisher": "Innersloth",
+      "genres": [
+        "Казуальные игры"
+      ],
+      "released": "16 ноя. 2018 г.",
+      "store": "https://store.steampowered.com/app/945360/Among_Us/",
+      "cover": "images/among-us/cover.jpg",
+      "screenshots": [
+        "images/among-us/shot1.jpg",
+        "images/among-us/shot2.jpg",
+        "images/among-us/shot3.jpg",
+        "images/among-us/shot4.jpg",
+        "images/among-us/shot5.jpg",
+        "images/among-us/shot6.jpg"
+      ],
+      "sizes": {
+        "original": "1.2 ГБ",
+        "repack": "532 МБ"
+      },
+      "features": [
+        "Ничего не вырезано и не пережато",
+        "Мультиплеер через OnlineFix",
+        "Установщик на русском, с выбором папки и без навязанных ярлыков",
+        "Сохранения не удаляются вместе с игрой — деинсталлятор спросит отдельно"
+      ],
+      "requirements": {
+        "minimum": [
+          "ОС: Windows 10 x32bit",
+          "Процессор: INTEL i3-4330",
+          "Оперативная память: 1 GB ОЗУ",
+          "Видеокарта: INTEL HD Graphics 4600"
+        ],
+        "recommended": [
+          "ОС: Windows 10 x64bit",
+          "Процессор: INTEL i3-4330",
+          "Оперативная память: 4 GB ОЗУ",
+          "Видеокарта: Nvidia GTX 650"
+        ]
+      },
+      "downloads": {
+        "magnet": "magnet:?xt=urn:btih:F505421FDF2E470CD45C63BC1009C52DD2CC0AF1&dn=Among%20Us%20%5bNonSense%20Repack%5d&tr=udp%3a%2f%2ftracker.openbittorrent.com%3a80%2fannounce&tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&tr=udp%3a%2f%2fopen.stealth.si%3a80%2fannounce&tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce",
+        "mirrors": []
+      }
+    }
+  ]
+}
