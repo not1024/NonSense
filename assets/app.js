@@ -181,6 +181,16 @@ function aboutView() {
 
 /* ------------------------------------------------------------- маршруты */
 
+function pageTitle(section, slug) {
+  if (section === 'about') return 'О репаках — NonSense Repacks';
+  if (section === 'r' && slug) {
+    const r = releases.find((item) => item.slug === decodeURIComponent(slug));
+    if (r) return `${r.title} — репак от NonSense`;
+  }
+  return 'NonSense Repacks';
+}
+
+
 function render() {
   const hash = location.hash.replace(/^#\/?/, '');
   const [section, slug] = hash.split('/');
@@ -197,6 +207,7 @@ function render() {
   }
 
   view.innerHTML = html;
+  document.title = pageTitle(section, slug);
   document.querySelectorAll('.nav a').forEach((link) => {
     link.classList.toggle('active', link.dataset.route === active);
   });
