@@ -11,26 +11,35 @@
 <body>
 
 <header class="top">
-  <a class="brand" href="#/">
-    <img src="images/logo.png" alt="" width="30" height="30">
-    <span>NonSense <b>Repacks</b></span>
-  </a>
+  <div class="inner top-inner">
+    <a class="brand" href="#/">
+      <img src="images/logo.png" alt="" width="30" height="30">
+      <span>NonSense <b>Repacks</b></span>
+    </a>
 
-  <nav class="nav">
-    <a href="#/" data-route="catalog">Репаки</a>
-    <a href="#/about" data-route="about">О репаках</a>
-  </nav>
+    <nav class="nav">
+      <a href="#/" data-route="catalog">Репаки</a>
+      <a href="#/about" data-route="about">О репаках</a>
+    </nav>
 
-  <label class="search">
-    <input id="search" type="search" placeholder="Поиск по названию" autocomplete="off">
-  </label>
+    <label class="search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+           stroke-linecap="round" aria-hidden="true">
+        <circle cx="11" cy="11" r="7"></circle>
+        <path d="M20 20l-3.5-3.5"></path>
+      </svg>
+      <input id="search" type="search" placeholder="Поиск по названию" autocomplete="off">
+    </label>
+  </div>
 </header>
 
-<main id="view" class="view"></main>
+<main id="view" class="view inner"></main>
 
 <footer class="bottom">
-  <span>NonSense Repacks</span>
-  <span class="muted">Поддержите разработчиков — покупайте игры, которые вам понравились.</span>
+  <div class="inner bottom-inner">
+    <span>NonSense Repacks</span>
+    <span class="muted">Поддержите разработчиков — покупайте игры, которые вам понравились.</span>
+  </div>
 </footer>
 
 <script src="assets/app.js"></script>
