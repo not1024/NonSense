@@ -48,7 +48,12 @@
       },
       "downloads": {
         "magnet": "magnet:?xt=urn:btih:F505421FDF2E470CD45C63BC1009C52DD2CC0AF1&dn=Among%20Us%20%5bNonSense%20Repack%5d&tr=udp%3a%2f%2ftracker.openbittorrent.com%3a80%2fannounce&tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&tr=udp%3a%2f%2fopen.stealth.si%3a80%2fannounce&tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce",
-        "mirrors": []
+        "mirrors": [
+          {
+            "label": "Telegram",
+            "url": "https://t.me/NonSenseRepacks/3"
+          }
+        ]
       }
     }
   ]
