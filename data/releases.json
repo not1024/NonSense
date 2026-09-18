@@ -26,6 +26,16 @@
         "original": "1.2 ГБ",
         "repack": "532 МБ"
       },
+      "files": {
+        "name": "Among Us [NonSense Repack]",
+        "size": 532433234,
+        "children": [
+          {
+            "name": "setup.exe",
+            "size": 532433234
+          }
+        ]
+      },
       "features": [
         "Ничего не вырезано и не пережато",
         "Мультиплеер через OnlineFix",

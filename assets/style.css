@@ -294,6 +294,52 @@ a { color: inherit; text-decoration: none; }
   background: var(--muted);
 }
 
+/* Список файлов раздачи — как на трекере: папки раскрываются, размер справа.
+   Раскрытие на <details>, без единой строчки JavaScript: без него список
+   тоже работает, просто все ветки открыты. */
+.block h2 .count { font-weight: 400; letter-spacing: 0; text-transform: none; color: var(--dim); }
+
+.files, .files ul { margin: 0; padding: 0; list-style: none; }
+.files ul { padding-left: 22px; border-left: 1px solid var(--line-soft); margin-left: 6px; }
+.files li { font-size: 14px; }
+
+.files .what { overflow-wrap: anywhere; }
+.files .size { color: var(--dim); font-variant-numeric: tabular-nums; white-space: nowrap; }
+
+.files .file {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 5px 2px;
+  color: #cfcfcf;
+}
+
+.files summary {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 5px 2px;
+  cursor: pointer;
+  list-style: none;
+  border-radius: 6px;
+}
+.files summary::-webkit-details-marker { display: none; }
+.files summary:hover { background: var(--bg-hover); }
+/* У файла плюсика нет, но отступ такой же — иначе имена в одной папке
+   встают лесенкой относительно вложенных папок. */
+.files .what::before {
+  content: "";
+  display: inline-block;
+  width: 14px;
+}
+.files summary .what::before {
+  content: "+";
+  color: var(--muted);
+  font-weight: 600;
+}
+.files details[open] > summary .what::before { content: "−"; }
+.files details[open] > summary { color: var(--fg); }
+
 .reqs { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px; }
 .reqs section {
   padding: 16px 18px;
