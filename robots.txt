@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://not1024.github.io/NonSense/sitemap.xml
+Sitemap: https://nonsense-repacks.duckdns.org/sitemap.xml
