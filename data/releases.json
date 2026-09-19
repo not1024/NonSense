@@ -28,11 +28,33 @@
       },
       "files": {
         "name": "Among Us [NonSense Repack]",
-        "size": 532433234,
+        "size": 532443791,
         "children": [
           {
+            "name": "setup-1.bin",
+            "size": 528832742,
+            "sha256": "54720ecfb27954cc12e5fbf738a965ffdaabd88c475d0b8439f734e3cc1fa133"
+          },
+          {
             "name": "setup.exe",
-            "size": 532433234
+            "size": 3605861,
+            "sha256": "8803c2f4c41d9744639d81c73babfc4e84f10926cf296acb2fdd42b1d60b6387"
+          },
+          {
+            "name": "SHA256SUMS.txt",
+            "size": 154
+          },
+          {
+            "name": "SHA256SUMS.txt.asc",
+            "size": 325
+          },
+          {
+            "name": "Проверить файлы.bat",
+            "size": 1676
+          },
+          {
+            "name": "ПРОВЕРКА.txt",
+            "size": 3033
           }
         ]
       },

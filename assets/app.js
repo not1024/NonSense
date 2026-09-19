@@ -62,3 +62,86 @@ document.addEventListener('click', (event) => {
 document.addEventListener('keydown', (event) => {
   if (event.key === 'Escape') document.querySelector('.lightbox')?.remove();
 });
+
+/* ------------------------------------------------- проверка скачанного файла
+
+   Считаем SHA-256 прямо здесь и сравниваем с тем, что записано на странице.
+   Файл читается с диска локально и никуда не уходит — это важно и человеку
+   про это написано прямо в разметке.
+
+   Смысл проверки в том, что эталон берётся с сайта, а не из раздачи: тот,
+   кто перезалил репак, правит торрент, но не эту страницу.                  */
+
+const verify = document.getElementById('verify');
+
+if (verify && window.crypto?.subtle) {
+  const verdict = document.getElementById('verdict');
+  const known = JSON.parse(verify.dataset.known || '{}');
+
+  const say = (text, kind) => {
+    verdict.textContent = text;
+    verdict.className = `verdict ${kind}`;
+    verdict.hidden = false;
+  };
+
+  const digest = async (file) => {
+    const buffer = await file.arrayBuffer();
+    const hash = await crypto.subtle.digest('SHA-256', buffer);
+    return [...new Uint8Array(hash)]
+      .map((b) => b.toString(16).padStart(2, '0'))
+      .join('');
+  };
+
+  const check = async (file) => {
+    // Гигабайтные .bin браузер читает целиком в память. Про setup.exe этого
+    // достаточно: он маленький и ручается за остальные файлы раздачи.
+    if (file.size > 1_500_000_000) {
+      say('Файл слишком большой для проверки в браузере. Проверь setup.exe — '
+        + 'если он настоящий, чужие .bin он не примет.', 'warn');
+      return;
+    }
+
+    say(`Считаю отпечаток «${file.name}»…`, 'wait');
+    try {
+      const hash = await digest(file);
+      if (known[hash]) {
+        const same = known[hash] === file.name;
+        say(same
+          ? `✓ Это настоящий «${file.name}» из моей раздачи`
+          : `✓ Файл настоящий — у меня он называется «${known[hash]}»`, 'ok');
+      } else {
+        say(`✗ «${file.name}» не совпадает ни с одним файлом этой раздачи. `
+          + 'Либо файл побился при скачивании, либо это не мой репак.', 'bad');
+      }
+    } catch (error) {
+      say(`Не вышло прочитать файл: ${error.message}`, 'warn');
+    }
+  };
+
+  ['dragenter', 'dragover'].forEach((name) => {
+    verify.addEventListener(name, (event) => {
+      event.preventDefault();
+      verify.classList.add('over');
+    });
+  });
+
+  ['dragleave', 'drop'].forEach((name) => {
+    verify.addEventListener(name, () => verify.classList.remove('over'));
+  });
+
+  verify.addEventListener('drop', (event) => {
+    event.preventDefault();
+    const file = event.dataTransfer?.files?.[0];
+    if (file) check(file);
+  });
+
+  // Перетаскивание работает не у всех — на телефоне его нет вовсе.
+  const picker = document.createElement('input');
+  picker.type = 'file';
+  picker.hidden = true;
+  picker.addEventListener('change', () => {
+    if (picker.files[0]) check(picker.files[0]);
+  });
+  verify.appendChild(picker);
+  verify.addEventListener('click', () => picker.click());
+}

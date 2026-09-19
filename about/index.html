@@ -31,7 +31,8 @@
 
     <nav class="nav"><a href="../">Репаки</a>
       <a href="../about/" class="active">О репаках</a>
-      <a class="out" href="https://rutracker.org/forum/tracker.php?rid=45603748" target="_blank" rel="noopener">Раздачи<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 16L16 8"></path><path d="M9 8h7v7"></path></svg></a></nav>
+      <a class="out" href="https://rutracker.org/forum/tracker.php?rid=45603748" target="_blank" rel="noopener">Раздачи<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 16L16 8"></path><path d="M9 8h7v7"></path></svg></a>
+      <a class="out" href="https://t.me/NonSenseRepacks" target="_blank" rel="noopener">Telegram<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 16L16 8"></path><path d="M9 8h7v7"></path></svg></a></nav>
   </div>
 </header>
 
@@ -52,8 +53,31 @@
     </ul>
 
     <h2>Где меня найти</h2>
-    <p>Все раздачи лежат на RuTracker — там же обсуждение и обратная связь:<br>
-       <a class="link" href="https://rutracker.org/forum/tracker.php?rid=45603748" target="_blank" rel="noopener">rutracker.org — раздачи NonSense</a></p>
+    <p>Этих трёх мест достаточно — больше у меня ничего нет. Если репак
+       попался где-то ещё, проверьте его отпечаток на странице релиза:
+       перезалить может кто угодно.</p>
+    <ul>
+      <li><a class="link" href="https://rutracker.org/forum/tracker.php?rid=45603748" target="_blank" rel="noopener">rutracker.org — раздачи NonSense</a> — сами торренты, обсуждение и обратная связь</li>
+      <li><a class="link" href="https://t.me/NonSenseRepacks" target="_blank" rel="noopener">t.me/NonSenseRepacks</a> — канал с новыми репаками</li>
+      <li>этот сайт — каталог и отпечатки файлов</li>
+    </ul>
+
+    <h2>Как убедиться, что репак мой</h2>
+    <p>На странице каждого репака есть список файлов с отпечатками. Перетащи
+       туда скачанный <code>setup.exe</code> — страница посчитает его отпечаток
+       прямо у тебя в браузере и скажет, сходится он или нет. Никуда ничего
+       не отправляется.</p>
+    <p>В самой раздаче лежат <code>SHA256SUMS.txt</code> с отпечатками всех
+       файлов и моя подпись под ними <code>SHA256SUMS.txt.asc</code>. Проверить
+       подпись можно моим публичным ключом:<br>
+       <a class="link" href="../nonsense.asc">nonsense.asc</a></p>
+    <p>Отпечаток ключа:</p>
+    <p><code class="fp">A3B6 E245 1C41 0B20 226E  E990 A6F5 3EF9 5B99 A002</code></p>
+    <p>Эта же строка написана на первой странице установщика, в описании моих
+       раздач и в канале. Сверь её хотя бы в двух местах: подменить одно —
+       реально, все сразу — нет.</p>
+    <p><b>Если подписи нет, она не сходится или отпечатки не совпадают
+       с этой страницей — это не мой репак.</b></p>
 
     <h2>Честно про деньги</h2>
     <p>Репаки бесплатные, донатов нет. Если игра понравилась — купите её,
