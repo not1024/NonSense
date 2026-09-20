@@ -521,6 +521,7 @@ a { color: inherit; text-decoration: none; }
 .tune-play {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 16px;
   width: 100%;
   height: 100%;
