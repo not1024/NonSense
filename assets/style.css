@@ -359,18 +359,36 @@ a { color: inherit; text-decoration: none; }
    Тон приглушённый: сообщение информационное, пугать им нечем. */
 .notice {
   margin-top: 18px;
-  padding: 14px 16px;
+  padding: 16px 20px;
   border: 1px solid #4a3c12;
   border-left: 3px solid #c8a33c;
   border-radius: var(--radius);
   background: #17140c;
-  color: #d8cba6;
+  color: #cbbd97;
   font-size: 14px;
-  line-height: 1.55;
+  line-height: 1.6;
 }
-.notice b { color: #f0dfae; }
-.notice code { color: #f0dfae; background: #241f12; padding: 1px 5px; border-radius: 4px; }
-.notice .link { color: #f0dfae; border-bottom-color: #6b5a24; }
+.notice b {
+  display: block;
+  margin-bottom: 8px;
+  color: #f0dfae;
+  font-size: 15px;
+}
+/* Абзацами, а не сплошняком: одним куском текст не читался, а ссылка в конце
+   разрывалась посреди фразы. */
+.notice p { margin: 0 0 6px; max-width: 74ch; }
+.notice p:last-child { margin-bottom: 0; }
+.notice code {
+  color: #f0dfae;
+  background: #241f12;
+  padding: 1px 6px;
+  border-radius: 4px;
+  font-size: 13px;
+  white-space: nowrap;
+}
+/* Короткая ссылка целиком: разорванная пополам «О репаках» с кавычкой
+   на другой строке выглядела неряшливо. */
+.notice .link { color: #f0dfae; border-bottom-color: #6b5a24; white-space: nowrap; }
 .notice .link:hover { border-bottom-color: #f0dfae; }
 
 /* Проверка скачанного файла: отпечаток считается в браузере и сравнивается
