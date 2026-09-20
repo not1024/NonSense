@@ -402,6 +402,17 @@ a { color: inherit; text-decoration: none; }
 .notice.info b { color: #dceaf6; }
 .notice.info code { color: #dceaf6; background: #132330; }
 
+/* Подпись над строкой: ключ и его отпечаток — разные вещи, и по виду
+   их легко перепутать. */
+.notice .cap {
+  margin: 16px 0 5px !important;
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  opacity: .65;
+}
+
 /* Длинный отпечаток и кнопка копирования рядом. */
 .fp-row {
   display: flex;
