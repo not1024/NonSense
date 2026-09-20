@@ -28,7 +28,7 @@
       },
       "files": {
         "name": "Among Us [NonSense Repack]",
-        "size": 532443791,
+        "size": 532444058,
         "children": [
           {
             "name": "setup-1.bin",
@@ -37,12 +37,12 @@
           },
           {
             "name": "setup.exe",
-            "size": 3605861,
-            "sha256": "8803c2f4c41d9744639d81c73babfc4e84f10926cf296acb2fdd42b1d60b6387"
+            "size": 3605893,
+            "sha256": "b15ae56471d45dbf65aedab30b5f5c4fa8f57c3d532de46437bd22a6ec593a06"
           },
           {
             "name": "SHA256SUMS.txt",
-            "size": 154
+            "size": 341
           },
           {
             "name": "SHA256SUMS.txt.asc",
@@ -50,11 +50,13 @@
           },
           {
             "name": "Проверить файлы.bat",
-            "size": 1676
+            "size": 1690,
+            "sha256": "992b6cc1391ae187d0b6106296374fcf2c36817255263a64b9c172b6a0a066c2"
           },
           {
             "name": "ПРОВЕРКА.txt",
-            "size": 3033
+            "size": 3067,
+            "sha256": "a71e971cec71d6f255abc381bedc7b271184a95bf77cc359e20173d373ee1bfb"
           }
         ]
       },
@@ -79,7 +81,7 @@
         ]
       },
       "downloads": {
-        "magnet": "magnet:?xt=urn:btih:e2fc3fc5da12e5bc5d77958daf57b18d545eda66&dn=Among%20Us%20%5BNonSense%20Repack%5D&xl=532443791&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce",
+        "magnet": "magnet:?xt=urn:btih:8597218f0f65c33468bec54f09249befebf8edff&dn=Among%20Us%20%5BNonSense%20Repack%5D&xl=532444058&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce",
         "mirrors": [
           {
             "label": "Telegram-зеркало",
