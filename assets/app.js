@@ -63,6 +63,32 @@ document.addEventListener('keydown', (event) => {
   if (event.key === 'Escape') document.querySelector('.lightbox')?.remove();
 });
 
+/* ------------------------------------------------------------- копирование
+
+   Отпечаток ключа и адрес кошелька переписывать руками невозможно —
+   сорок символов без единой ошибки никто не наберёт.                         */
+
+document.addEventListener('click', async (event) => {
+  const button = event.target.closest('.copy');
+  if (!button) return;
+
+  try {
+    await navigator.clipboard.writeText(button.dataset.copy || '');
+    const was = button.title;
+    button.classList.add('done');
+    button.title = 'Скопировано';
+    setTimeout(() => {
+      button.classList.remove('done');
+      button.title = was;
+    }, 1500);
+  } catch {
+    // Буфер обмена доступен не везде — по http и в старых браузерах его нет.
+    // Тогда просто выделяем текст, чтобы скопировать вручную.
+    const code = button.parentElement?.querySelector('code');
+    if (code) getSelection().selectAllChildren(code);
+  }
+});
+
 /* ------------------------------------------------- проверка скачанного файла
 
    Считаем SHA-256 прямо здесь и сравниваем с тем, что записано на странице.

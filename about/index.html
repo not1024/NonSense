@@ -18,7 +18,7 @@
 <meta property="og:image" content="https://nonsense-repacks.duckdns.org/images/card.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#0b0b0b">
-<link rel="stylesheet" href="../assets/style.css?v=4decaba9">
+<link rel="stylesheet" href="../assets/style.css?v=e0957eb1">
 </head>
 <body>
 
@@ -41,48 +41,51 @@
     <h1>О репаках</h1>
     <p>Это небольшая коллекция репаков от NonSense. Игры собраны так, чтобы их
        можно было поставить и играть, не разбираясь в кряках и патчах.</p>
-
     <p>Что именно сделано с конкретной игрой — написано на её странице
        в разделе «Что в репаке». У каждого репака это своё.</p>
 
-    <h2>Как ставить</h2>
-    <ul>
+    <h2>Как поставить</h2>
+    <ol>
       <li>Скачайте раздачу целиком: <code>setup.exe</code> и все файлы рядом с ним.</li>
       <li>Запустите <code>setup.exe</code> и следуйте шагам.</li>
       <li>Если антивирус ругается на кряк — это ожидаемо, решайте сами.</li>
-    </ul>
+    </ol>
 
     <h2>Где меня найти</h2>
     <p>Этих трёх мест достаточно — больше у меня ничего нет. Если репак
        попался где-то ещё, проверьте его отпечаток на странице релиза:
        перезалить может кто угодно.</p>
-    <ul>
-      <li><a class="link" href="https://rutracker.org/forum/tracker.php?rid=45603748" target="_blank" rel="noopener">rutracker.org — раздачи NonSense</a> — сами торренты, обсуждение и обратная связь</li>
-      <li><a class="link" href="https://t.me/NonSenseRepacks" target="_blank" rel="noopener">t.me/NonSenseRepacks</a> — канал с новыми репаками</li>
-      <li>этот сайт — каталог и отпечатки файлов</li>
+    <ul class="places">
+      <li><a class="link" href="https://rutracker.org/forum/tracker.php?rid=45603748" target="_blank" rel="noopener">rutracker.org</a>
+          — сами торренты, обсуждение и обратная связь</li>
+      <li><a class="link" href="https://t.me/NonSenseRepacks" target="_blank" rel="noopener">t.me/NonSenseRepacks</a>
+          — канал с новыми репаками</li>
+      <li>этот сайт — каталог, отпечатки файлов и мой ключ</li>
     </ul>
 
     <h2>Как убедиться, что репак мой</h2>
     <p>На странице каждого репака есть список файлов с отпечатками. Перетащите
-       туда скачанный <code>setup.exe</code> — страница посчитает его отпечаток
-       прямо у вас в браузере и скажет, сходится он или нет. Никуда ничего
-       не отправляется.</p>
+       туда скачанный <code>setup.exe</code> — отпечаток посчитается прямо
+       у вас в браузере и сравнится с моим. Никуда ничего не отправляется.</p>
     <p>В самой раздаче лежат <code>SHA256SUMS.txt</code> с отпечатками всех
-       файлов и моя подпись под ними <code>SHA256SUMS.txt.asc</code>. Проверить
-       подпись можно моим публичным ключом:<br>
-       <a class="link" href="../nonsense.asc">nonsense.asc</a></p>
-    <p>Отпечаток ключа:</p>
-    <p><code class="fp">A3B6 E245 1C41 0B20 226E  E990 A6F5 3EF9 5B99 A002</code></p>
-    <p>Эта же строка написана на первой странице установщика, в описании моих
-       раздач и в канале. Сверьте её хотя бы в двух местах: подменить одно —
-       реально, все сразу — нет.</p>
+       файлов и подпись под ними <code>SHA256SUMS.txt.asc</code>. Проверить
+       подпись можно моим публичным ключом —
+       <a class="link" href="../nonsense.asc">nonsense.asc</a>.</p>
+
+    <div class="notice info">
+      <b>Отпечаток моего ключа</b>
+      <p class="fp-row">
+        <code class="fp">A3B6 E245 1C41 0B20 226E  E990 A6F5 3EF9 5B99 A002</code>
+        <button class="copy" type="button" data-copy="A3B6 E245 1C41 0B20 226E  E990 A6F5 3EF9 5B99 A002"
+                title="Скопировать отпечаток"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button>
+      </p>
+      <p>Эта же строка написана на первой странице установщика, в описании моих
+         раздач и в канале. Сверьте её хотя бы в двух местах: подменить одно —
+         реально, все сразу — нет.</p>
+    </div>
+
     <p><b>Если подписи нет, она не сходится или отпечатки не совпадают
        с этой страницей — это не мой репак.</b></p>
-
-    <h2>Честно про деньги</h2>
-    <p>Репаки бесплатные, донатов нет. Если игра понравилась — купите её,
-       разработчики этого заслуживают. Ссылка на магазин есть на странице
-       каждого репака.</p>
   </div>
 </main>
 
@@ -92,6 +95,6 @@
     <span class="muted">Поддержите разработчиков — покупайте игры, которые вам понравились.</span>
   </div>
 </footer>
-
+<script src="../assets/app.js?v=9c5d25f9"></script>
 </body>
 </html>
