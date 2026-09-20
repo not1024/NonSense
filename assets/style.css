@@ -435,6 +435,22 @@ a { color: inherit; text-decoration: none; }
 .copy:hover { background: #132330; border-color: #4a90d9; color: #dceaf6; }
 .copy.done { border-color: #5aa469; color: #7bd88f; }
 
+/* Ключ — кнопкой, а не ссылкой в конце абзаца: её там просто не замечали. */
+.key-get {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 9px 16px;
+  border: 1px solid #24435c;
+  border-radius: 8px;
+  background: #132330;
+  color: #dceaf6;
+  font-size: 14px;
+  transition: background .15s, border-color .15s;
+}
+.key-get:hover { background: #1a3145; border-color: #4a90d9; }
+.key-get svg { width: 16px; height: 16px; flex: none; }
+
 /* Проверка скачанного файла: отпечаток считается в браузере и сравнивается
    с тем, что записано на этой странице. */
 .verify {
