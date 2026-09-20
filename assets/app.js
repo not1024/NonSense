@@ -77,6 +77,9 @@ const verify = document.getElementById('verify');
 if (verify && window.crypto?.subtle) {
   const verdict = document.getElementById('verdict');
   const known = JSON.parse(verify.dataset.known || '{}');
+  // Список отпечатков и подпись отпечатка не имеют — по природе вещей.
+  // Без этой оговорки страница обвиняла собственные файлы в подделке.
+  const special = JSON.parse(verify.dataset.special || '{}');
 
   const say = (text, kind) => {
     verdict.textContent = text;
@@ -93,15 +96,20 @@ if (verify && window.crypto?.subtle) {
   };
 
   const check = async (file) => {
+    if (special[file.name]) {
+      say(`«${file.name}» отпечатком не проверяется. ${special[file.name]}`, 'warn');
+      return;
+    }
+
     // Гигабайтные .bin браузер читает целиком в память. Про setup.exe этого
     // достаточно: он маленький и ручается за остальные файлы раздачи.
     if (file.size > 1_500_000_000) {
-      say('Файл слишком большой для проверки в браузере. Проверь setup.exe — '
+      say('Файл слишком большой для проверки в браузере. Проверьте setup.exe — '
         + 'если он настоящий, чужие .bin он не примет.', 'warn');
       return;
     }
 
-    say(`Считаю отпечаток «${file.name}»…`, 'wait');
+    say(`Считаю отпечаток «${file.name}», это может занять время…`, 'wait');
     try {
       const hash = await digest(file);
       if (known[hash]) {
