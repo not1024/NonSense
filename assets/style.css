@@ -557,6 +557,9 @@ a { color: inherit; text-decoration: none; }
   .view { padding-block: 26px 48px; }
   .release-head { grid-template-columns: 1fr; gap: 20px; }
   .release-head h1 { font-size: 24px; }
+  /* Обложка из Steam всего 460 пикселей шириной. В одну колонку она
+     растягивалась на всю ширину и мылилась — выше исходника не поднимаем. */
+  .release-head img { max-width: 460px; }
 }
 
 /* ------------------------------------------------------------------ телефон */
@@ -618,4 +621,14 @@ a { color: inherit; text-decoration: none; }
   .prose h1 { font-size: 24px; }
   .block h2 { font-size: 12px; }
   .bottom-inner { flex-direction: column; align-items: flex-start; gap: 6px; }
+}
+
+/* Совсем узкие экраны — старые телефоны на 320. Поджимаем меню, чтобы все
+   четыре пункта влезали целиком: обрезанный «Teleg…» читается как поломка,
+   а не как «пролистай вбок». */
+@media (max-width: 380px) {
+  .nav { gap: 3px; }
+  .nav a { padding: 5px 8px; font-size: 12px; }
+  .brand { font-size: 14px; gap: 8px; }
+  .brand img { width: 26px; height: 26px; }
 }
