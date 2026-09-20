@@ -89,6 +89,22 @@ document.addEventListener('click', async (event) => {
   }
 });
 
+/* --------------------------------------------------- музыка из установщика
+
+   Плеер подгружается только по клику. Обычный встроенный ролик тянет около
+   мегабайта скриптов и ставит счётчики каждому, кто просто открыл страницу, —
+   за песню, которую он, может, и слушать не собирался.                       */
+
+document.querySelector('.tune')?.addEventListener('click', function load() {
+  const frame = document.createElement('iframe');
+  frame.src = `https://www.youtube-nocookie.com/embed/${this.dataset.video}`
+    + '?autoplay=1&rel=0';
+  frame.title = 'Aphex Twin — Xtal';
+  frame.allow = 'autoplay; encrypted-media; picture-in-picture';
+  frame.allowFullscreen = true;
+  this.replaceChildren(frame);
+}, { once: true });
+
 /* ------------------------------------------------- проверка скачанного файла
 
    Считаем SHA-256 прямо здесь и сравниваем с тем, что записано на странице.
