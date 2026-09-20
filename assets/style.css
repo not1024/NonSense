@@ -545,6 +545,10 @@ a { color: inherit; text-decoration: none; }
 
 /* ---------------------------------------------------------------- узкий экран */
 
+/* Подсказка вместо перетаскивания: показывается только на узких экранах.
+   Обе версии лежат в разметке, переключает их ширина — без JavaScript. */
+.verify-note { display: none; }
+
 @media (max-width: 860px) {
   .inner { padding-inline: 18px; }
   .top { padding-block: 12px; }
@@ -553,4 +557,65 @@ a { color: inherit; text-decoration: none; }
   .view { padding-block: 26px 48px; }
   .release-head { grid-template-columns: 1fr; gap: 20px; }
   .release-head h1 { font-size: 24px; }
+}
+
+/* ------------------------------------------------------------------ телефон */
+
+@media (max-width: 620px) {
+  .inner { padding-inline: 14px; }
+
+  /* Меню — лента с прокруткой вбок. Четыре пункта в строку на узком экране
+     не влезают, а перенос ломал «О репаках» пополам. Лента переживёт и
+     пятый пункт, если он когда-нибудь появится. */
+  .top-inner { gap: 10px; }
+  .brand { font-size: 15px; }
+  .nav {
+    width: 100%;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none;
+    padding-bottom: 2px;
+  }
+  .nav::-webkit-scrollbar { display: none; }
+  .nav a { padding: 6px 11px; font-size: 13px; white-space: nowrap; flex: none; }
+  .nav a.out { gap: 4px; }
+  .nav a.out svg { width: 11px; height: 11px; }
+
+  .grid { grid-template-columns: 1fr; gap: 14px; }
+  .facts { grid-template-columns: 1fr 1fr; }
+  .reqs { grid-template-columns: 1fr; }
+  .shots { grid-template-columns: 1fr 1fr; gap: 8px; }
+
+  /* Кнопки во всю ширину: попасть пальцем в узкую проще некуда, но
+     соседние кнопки в один ряд на телефоне жмутся случайно. */
+  .downloads { display: grid; gap: 8px; }
+  .downloads .btn { width: 100%; text-align: center; }
+
+  /* Строка файла в две строки: имя сверху, отпечаток и размер под ним. */
+  .files .file, .files summary { flex-wrap: wrap; gap: 2px 12px; }
+  .files .what { width: 100%; }
+  .files .hash { margin-left: 22px; margin-right: auto; font-size: 11px; }
+  .files ul { padding-left: 14px; margin-left: 3px; }
+
+  /* Перетаскивание с телефона — сценарий, которого не бывает. */
+  .verify { display: none; }
+  .verify-note {
+    display: block;
+    margin-top: 14px;
+    padding: 12px 14px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.5;
+  }
+  .verify-note code { color: #cfcfcf; font-size: 12px; }
+
+  .notice { padding: 13px 15px; font-size: 13.5px; }
+  .notice b { font-size: 14px; }
+  .fp-row .fp { font-size: 12.5px; letter-spacing: 0; }
+
+  .prose h1 { font-size: 24px; }
+  .block h2 { font-size: 12px; }
+  .bottom-inner { flex-direction: column; align-items: flex-start; gap: 6px; }
 }
